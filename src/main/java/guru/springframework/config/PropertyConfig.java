@@ -37,7 +37,7 @@ public class PropertyConfig {
     @Bean
     public FakeDataSource fakeDataSource() {
         FakeDataSource fakeDataSource = new FakeDataSource();
-        fakeDataSource.setUser(environment.getProperty("USER_NAME"));
+        fakeDataSource.setUser(user);
         fakeDataSource.setPassword(password);
         fakeDataSource.setUrl(dburl);
 
@@ -54,8 +54,8 @@ public class PropertyConfig {
         return fakeJmsBroker;
     }
 
-    @Bean
+   /* @Bean
     public static PropertySourcesPlaceholderConfigurer properties() {
         return new PropertySourcesPlaceholderConfigurer();
-    }
+    }*/
 }
